@@ -12,12 +12,12 @@ spec:
   selector:
     matchLabels:
       name: {{ .Values.service.name | quote }}
-      ns: {{ .Release.Namespace | quote }}
   template:
     metadata:
       labels:
         name: {{ .Values.service.name | quote }}
         app: {{ .Values.service.name | quote }}
+        version: {{ .Values.service.version | quote }}
     spec:
       containers:
         - name: {{ .Values.service.name }}
