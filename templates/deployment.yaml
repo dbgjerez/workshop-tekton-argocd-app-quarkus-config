@@ -16,7 +16,6 @@ spec:
     metadata:
       labels:
         name: {{ .Values.service.name | quote }}
-        app: {{ .Values.service.name | quote }}
         version: {{ .Values.service.version | quote }}
     spec:
       containers:
