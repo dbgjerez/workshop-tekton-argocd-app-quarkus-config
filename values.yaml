@@ -1,0 +1,21 @@
+service:
+  name: quarkus-app
+  image: quay.io/dborrego/workshop-tekton-argocd-app-quarkus
+  version: 0.1
+
+deployment:
+  replicas: 2
+  port: 8080
+  health:
+    liveness: /api/v1/health
+    readiness: /api/v1/health
+  resources: 
+    limits:
+      cpu: 250m
+      memory: 32Mi
+    requests:
+      cpu: 100m
+      memory: 8Mi
+
+config:
+  env:
