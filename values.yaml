@@ -8,7 +8,7 @@ deployment:
   port: 8080
   health:
     liveness: /q/health/live
-    readiness: /q/health/live
+    readiness: /q/health/ready
   resources: 
     limits:
       cpu: 500m
