@@ -1,2 +1,4 @@
 service:
   version: 22
+deployment:
+  replicas: 3
