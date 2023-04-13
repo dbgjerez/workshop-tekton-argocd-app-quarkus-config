@@ -18,6 +18,7 @@ spec:
         name: {{ .Values.service.name | quote }}
         version: {{ .Values.service.version | quote }}
     spec:
+      serviceAccountName: {{ .Values.service.name }}
       containers:
         - name: {{ .Values.service.name }}
           image: {{ .Values.service.image }}:{{ .Values.service.version }}
