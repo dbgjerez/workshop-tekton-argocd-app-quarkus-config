@@ -7,3 +7,5 @@ spec:
   to:
     kind: Service
     name: {{ .Values.service.name }}
+  tls:
+    termination: edge
